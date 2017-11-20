@@ -1,0 +1,185 @@
+
+body { user-select: none; }
+
+/*背景图片模糊处理*/
+.background {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: url(./background.jpg) center center no-repeat;
+	background-size: cover;
+	-webkit-filter: blur(30px);
+    -moz-filter: blur(30px);
+    -ms-filter: blur(30px);    
+    filter: blur(30px);
+}
+
+/*Ajax加载完毕前的loading动画*/
+.loading0 {
+	position: absolute;
+	top: 300px;
+	left: 50%;
+	margin-left: -65px;
+}
+@keyframes loading0 {
+	0%  {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+.loading {
+	width: 100px;
+	height: 100px;
+	border: 15px solid rgba(255, 255, 255, .3);
+	border-top: 15px solid white;
+	border-radius: 50%;
+	animation:  loading0 1s infinite linear;
+}
+
+.main {
+	display: none;
+	position: absolute;
+	top: 6rem;
+	right: 18rem;
+	bottom: 6rem;
+	left: 18rem;
+	border-radius: 10px;
+	-webkit-box-shadow: 0 0 10px #000000;
+    -moz-box-shadow: 0 0 10px #000000;
+    -ms-box-shadow: 0 0 10px #000000;
+	box-shadow: 0 0 10px #000000;
+}
+
+/*含背景图片的上半部分*/
+.header {
+	width: 100%;
+	height: 70%;
+	background: url(./background.jpg) center center no-repeat;
+	background-size: cover;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+.header > div {
+	float: left;
+	margin: 2rem 0 0 4rem;
+}
+.weizhi {
+	margin-left: -.9rem;
+	width: 4rem;
+	height: 4rem;
+}
+.header > div > p {
+	margin: 0 0 .5rem 0;
+	font-size: 1.2rem;
+	color: white;
+	font-weight: bold;
+}
+.header > div > div {
+	font-size: 1.2rem;
+	color: white;
+	font-weight: bold;
+}
+.header > div > div > p {
+	display: inline;
+}
+.header > div > div > span {
+	font-size: 1rem;
+}
+
+/*透明、模糊处理的下半部分*/
+.footer {
+	width: 100%;
+	height: 30%;
+	background: rgba(255, 255, 255, .2);
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+ol, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.footer > ol {
+	display: flex;
+	height: 100%;
+	color: white;
+}
+.footer > ol > li {
+	width: 11%;
+	border-left: 1px solid rgba(0, 0, 0, .15);
+	transform: scaleY(.5);
+}
+.footer > ol > li > div {
+	margin: -2rem auto 0 auto;
+	width: 3rem;
+	height: 1.5rem;
+	font-size: .8rem;
+	line-height: 1.5rem;
+	font-weight: bold;
+	text-align: center;
+	background: rgba(0, 0, 0, .15);
+	border-radius: 20px;
+	transform: scaleY(2);
+}
+.footer > ol > li > img {
+	display: block;
+	margin: 4rem auto 5rem auto;
+	width: 4rem;
+	height: 4rem;
+	transform: scaleY(2);
+}
+.footer > ol > li > h5 {
+	margin-top: -1.5rem;
+	text-align: center;
+	transform: scaleY(2);
+}
+.footer > ol > li:first-child {
+	display: flex;
+	width: 34%;
+	border: none;
+}
+.footer > ol > li:first-child > div {
+	background: none;
+}
+.footer > ol > li:first-child > div:first-child > div:first-child {
+	margin-left: -2rem;
+	width: 9.5rem;
+	font-size: .9rem;
+	background: rgba(0, 0, 0, .15);
+	border-radius: 20px;
+}
+.footer > ol > li:first-child > div:first-child > div:first-child > p {
+	display: inline;
+}
+.footer > ol > li:first-child > div:first-child > div:first-child > p:nth-child(2) {
+	margin: 0 .1rem 0 .7rem;
+}
+.footer > ol > li:first-child > div:first-child > div:first-child > p:nth-child(3) {
+	font-size: .7rem;
+}
+.footer > ol > li:first-child > div:first-child > img {
+	margin-left: -1.2rem;
+	width: 8rem;
+}
+.footer > ol > li:first-child > div:nth-child(2) {
+	margin-right: 1rem;
+	width: 8rem;
+}
+.footer > ol > li:first-child > div:nth-child(2) > h1 {
+	margin: 0;
+	font-size: 4rem;
+	line-height: 5rem;
+}
+.footer > ol > li:first-child > div:nth-child(2) > h1 > p:nth-child(2) {
+	font-size: 3rem;
+}
+.footer > ol > li:first-child > div:nth-child(2) p {
+	display: inline;
+}
+.footer > ol > li:first-child > div:nth-child(2) > h4 {
+	margin: 0;
+}
