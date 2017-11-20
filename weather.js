@@ -103,5 +103,7 @@ $.ajax(`https://weixin.jirengu.com/weather`).done((data) => {
 	$('.footer > ol > li:first-child > div:nth-child(2) > span > p:first-child').html(data.weather[0]['now']['text'])
 	$('.footer > ol > li:first-child > div:nth-child(2) > span > p:nth-child(2)').html(data.weather[0]['now']['wind_scale'])
 	$('.footer > ol > li:first-child > div:nth-child(2) > h4 > p').html(data.weather[0]['now']['air_quality']['city']['quality'])
+	//数据加载完成后隐藏loading动画，显示页面
+	$('.loading0').css('display', 'none')
 	$('.main').css('display', 'block')
 })
